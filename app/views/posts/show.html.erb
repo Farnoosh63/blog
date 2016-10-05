@@ -4,6 +4,12 @@
   <strong>Title:</strong>
   <%= @post.title %>
 </p>
+<p>
+  <%= if @post.body
+    'Body:'
+    @post.body
+  end %>
+</p>
 
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Back', posts_path %>
